@@ -13,10 +13,16 @@ def table():
             name VARCHAR(20),
             create_table TIMESTAMP DEFAULT now()
         );"""
+    admins_table = f"""
+        CREATE TABLE admins(
+            name VARCHAR(20),
+            chat_id VARCHAR(20)
+        );"""
     
     data = {
         "menu_table": menu_table,
-        "category_table": category_table
+        "category_table": category_table,
+        "admins_table":admins_table
     }
     for i in data:
         print(f"{i} - {Database.connect(data[i], "create")}")

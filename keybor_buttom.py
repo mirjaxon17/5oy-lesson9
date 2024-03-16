@@ -2,7 +2,8 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from database import Database
 
 menu_keyword= ReplyKeyboardMarkup([
-    [KeyboardButton("Menyu"), KeyboardButton("Dostavka")]
+    [KeyboardButton("Menyu"), KeyboardButton("Admin"),
+     KeyboardButton("Category")]
     ], resize_keyboard=True)
 
 menu_detail = ReplyKeyboardMarkup(resize_keyboard=True)
@@ -12,15 +13,15 @@ for i in Database.connect(query, "select"):
 menu_detail.add(KeyboardButton("Back"))
 
 category_datail = ReplyKeyboardMarkup([
-    [KeyboardButton("Evos")],
-    [KeyboardButton("Uzum")],
-    [KeyboardButton("Yandex")],
-    [KeyboardButton("Safiya")],
-    [KeyboardButton("Back")],
+    [KeyboardButton("Category_1")],
+    [KeyboardButton("Category_1")],
+    [KeyboardButton("Category_1")],
+    [KeyboardButton("Category_1")],
+    [KeyboardButton("Category_1")],
 ], resize_keyboard=True)
 
 menu_1 = ReplyKeyboardMarkup([
-    [KeyboardButton("Python")],
-    [KeyboardButton("Java")],
+    [KeyboardButton("Back")],
+    [KeyboardButton("Back")],
     [KeyboardButton("Back")],
 ], resize_keyboard=True)
